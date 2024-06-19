@@ -269,11 +269,23 @@
         
           
           <li>
-            <a href="#bobadojo%2fmenu%2fv1%2fmenu.proto">bobadojo/menu/v1/menu.proto</a>
+            <a href="#bobadojo%2fmenus%2fv1%2fmenus.proto">bobadojo/menus/v1/menus.proto</a>
             <ul>
               
+                <li>
+                  <a href="#bobadojo.menus.v1.GetMenuRequest"><span class="badge">M</span>GetMenuRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#bobadojo.menus.v1.Menu"><span class="badge">M</span>Menu</a>
+                </li>
               
               
+              
+              
+                <li>
+                  <a href="#bobadojo.menus.v1.Menus"><span class="badge">S</span>Menus</a>
+                </li>
               
             </ul>
           </li>
@@ -547,7 +559,7 @@
 
       
         <h3 id="bobadojo.stores.v1.Stores">Stores</h3>
-        <p>A store locator API</p>
+        <p>Locate stores and related details.</p>
         <table class="enum-table">
           <thead>
             <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
@@ -627,17 +639,119 @@
     
       
       <div class="file-heading">
-        <h2 id="bobadojo/menu/v1/menu.proto">bobadojo/menu/v1/menu.proto</h2><a href="#title">Top</a>
+        <h2 id="bobadojo/menus/v1/menus.proto">bobadojo/menus/v1/menus.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
+        <h3 id="bobadojo.menus.v1.GetMenuRequest">GetMenuRequest</h3>
+        <p>Request to GetMenu.</p>
 
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The ID of the menu resource to retrieve. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="bobadojo.menus.v1.Menu">Menu</h3>
+        <p>A store resource.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>A unique id. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>description</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>A description of the menu </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
       
 
       
 
       
+
+      
+        <h3 id="bobadojo.menus.v1.Menus">Menus</h3>
+        <p>Get information about store menus.</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>GetMenu</td>
+                <td><a href="#bobadojo.menus.v1.GetMenuRequest">GetMenuRequest</a></td>
+                <td><a href="#bobadojo.menus.v1.Menu">Menu</a></td>
+                <td><p>Returns a menu for a specific store.</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+
+        
+          
+          
+          <h4>Methods with HTTP bindings</h4>
+          <table>
+            <thead>
+              <tr>
+                <td>Method Name</td>
+                <td>Method</td>
+                <td>Pattern</td>
+                <td>Body</td>
+              </tr>
+            </thead>
+            <tbody>
+            
+              
+              
+              <tr>
+                <td>GetMenu</td>
+                <td>GET</td>
+                <td>/v1/menus/{name=store}</td>
+                <td></td>
+              </tr>
+              
+            
+            </tbody>
+          </table>
+          
+        
     
       
       <div class="file-heading">
