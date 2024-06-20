@@ -223,7 +223,11 @@
             <ul>
               
                 <li>
-                  <a href="#bobadojo.stores.v1.Box"><span class="badge">M</span>Box</a>
+                  <a href="#bobadojo.stores.v1.Address"><span class="badge">M</span>Address</a>
+                </li>
+              
+                <li>
+                  <a href="#bobadojo.stores.v1.BoundingBox"><span class="badge">M</span>BoundingBox</a>
                 </li>
               
                 <li>
@@ -239,7 +243,7 @@
                 </li>
               
                 <li>
-                  <a href="#bobadojo.stores.v1.Point"><span class="badge">M</span>Point</a>
+                  <a href="#bobadojo.stores.v1.Location"><span class="badge">M</span>Location</a>
                 </li>
               
                 <li>
@@ -380,7 +384,66 @@
       <p></p>
 
       
-        <h3 id="bobadojo.stores.v1.Box">Box</h3>
+        <h3 id="bobadojo.stores.v1.Address">Address</h3>
+        <p>Address</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>street</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Street address </p></td>
+                </tr>
+              
+                <tr>
+                  <td>city</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>City </p></td>
+                </tr>
+              
+                <tr>
+                  <td>state</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>State </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zip_code</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>Zip code </p></td>
+                </tr>
+              
+                <tr>
+                  <td>region_code</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Country </p></td>
+                </tr>
+              
+                <tr>
+                  <td>county</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>County </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="bobadojo.stores.v1.BoundingBox">BoundingBox</h3>
         <p>A bounding box.</p>
 
         
@@ -392,14 +455,14 @@
               
                 <tr>
                   <td>max</td>
-                  <td><a href="#bobadojo.stores.v1.Point">Point</a></td>
+                  <td><a href="#bobadojo.stores.v1.Location">Location</a></td>
                   <td></td>
                   <td><p>Maximum coordinate values. </p></td>
                 </tr>
               
                 <tr>
                   <td>min</td>
-                  <td><a href="#bobadojo.stores.v1.Point">Point</a></td>
+                  <td><a href="#bobadojo.stores.v1.Location">Location</a></td>
                   <td></td>
                   <td><p>Minimum coordinate values. </p></td>
                 </tr>
@@ -423,14 +486,14 @@
               
                 <tr>
                   <td>bounding_box</td>
-                  <td><a href="#bobadojo.stores.v1.Box">Box</a></td>
+                  <td><a href="#bobadojo.stores.v1.BoundingBox">BoundingBox</a></td>
                   <td></td>
                   <td><p>Bounding box of the request. </p></td>
                 </tr>
               
                 <tr>
                   <td>center</td>
-                  <td><a href="#bobadojo.stores.v1.Point">Point</a></td>
+                  <td><a href="#bobadojo.stores.v1.Location">Location</a></td>
                   <td></td>
                   <td><p>Center point of the request. </p></td>
                 </tr>
@@ -490,8 +553,8 @@
 
         
       
-        <h3 id="bobadojo.stores.v1.Point">Point</h3>
-        <p>A point.</p>
+        <h3 id="bobadojo.stores.v1.Location">Location</h3>
+        <p>A location.</p>
 
         
           <table class="field-table">
@@ -553,66 +616,24 @@
                 </tr>
               
                 <tr>
+                  <td>location</td>
+                  <td><a href="#bobadojo.stores.v1.Location">Location</a></td>
+                  <td></td>
+                  <td><p>Store location </p></td>
+                </tr>
+              
+                <tr>
                   <td>address</td>
-                  <td><a href="#string">string</a></td>
+                  <td><a href="#bobadojo.stores.v1.Address">Address</a></td>
                   <td></td>
-                  <td><p>Street address </p></td>
-                </tr>
-              
-                <tr>
-                  <td>city</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>City </p></td>
-                </tr>
-              
-                <tr>
-                  <td>state</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>State </p></td>
-                </tr>
-              
-                <tr>
-                  <td>zip_code</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Zip code </p></td>
+                  <td><p>Store address </p></td>
                 </tr>
               
                 <tr>
                   <td>store_hours</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p>String-encoded store hours </p></td>
-                </tr>
-              
-                <tr>
-                  <td>latitude</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Latitude </p></td>
-                </tr>
-              
-                <tr>
-                  <td>longitude</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Longitude </p></td>
-                </tr>
-              
-                <tr>
-                  <td>region_code</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Country </p></td>
-                </tr>
-              
-                <tr>
-                  <td>county</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>County </p></td>
+                  <td><p>Store hours </p></td>
                 </tr>
               
             </tbody>
